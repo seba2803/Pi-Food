@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    height: 33.4vw;
+    background-image: url('./Home.jpg');
+    padding: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.boton{
+    height: 40px;
+    border: 1px solid black;
+    font-family: cursive;
+    background-color: rgba(150,150,150,0.7);
+    border-radius: 5px;
+    margin: 30px;
+    width: 100px;
+}
+
+.boton:hover{
+    background-color: rgba(190,190,190,0.9);
+    border: 3px solid black;
+}

@@ -1,0 +1,57 @@
+.container{
+    height: 100vh;
+    background-image: url('./Fondo-home.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contain{
+    display: flex;
+    margin: 20px;
+}
+
+.btn{
+    display: fixed;
+    margin-left: 20px;
+}
+
+.boton{
+    height: 35px;
+    width: 80px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 28px;
+    box-shadow: 2px 2px 20px rgba(40,40,40);
+    background-color: rgba(230,230,10,0.3);;
+}
+
+.boton:hover{
+    box-shadow: 3px 3px 20px 4px;
+    color:azure;
+    background-color: rgba(230,230,10,0.7);
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(180,180,180,0.8);
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    width: 200%;
+    height: max-content;
+    overflow: auto;
+}
+
+.items{
+    margin-bottom: 15px;
+}
+
+
+

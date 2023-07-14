@@ -1,0 +1,33 @@
+.recetas{
+    display: grid;
+    grid-template-columns: 0.7fr 0.7fr 0.7fr;
+    grid-gap: 1.5rem;
+    margin: 20px;
+}
+
+.recet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    height: 400px;
+    padding: 5px;
+    background: rgba(244, 178, 55,0.9);
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.img{
+    width: 320px;
+}
+
+.name{
+    text-decoration: none;
+    color: black;
+    font-family: cursive;
+}
+
+.diets{
+    font-family: cursive;
+}
