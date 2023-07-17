@@ -14,10 +14,17 @@ const allRecipes = require('../controllers/allRecipes');
 
 const miReceta = require('../controllers/miReceta');
 
+const deleteRecets = require('../controllers/deleteRecets');
+
 const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
+
+//borra receta de la base de datos
+router.delete('/delete/:id', (req,res) => {
+    deleteRecets(req,res);
+})
 
 //obtine todas las dietas
 router.get('/diets', (req,res) => {

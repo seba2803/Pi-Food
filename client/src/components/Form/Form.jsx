@@ -40,15 +40,17 @@ const Form = () => {
         if(form.dietas.includes(event.target.value)){
             const filter = form.dietas.filter(diet => diet !== event.target.value);
             setForm({...form, dietas: filter});
+            setError(validation({...form, dietas: filter}));
         }else{
             setForm({...form, dietas: [...form.dietas, event.target.value]});
+            setError(validation({...form, dietas: [...form.dietas, event.target.value]}));
         }
     };
 
     const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
-        if(!error.nombre && !error.resumen && !error.health && !error.pasos && !error.imagen){
+        if(!error.nombre && !error.resumen && !error.health && !error.pasos && !error.imagen && !error.dietas){
             dispatch(addRecipe({nombre: form.nombre, imagen: form.imagen, resumenPlato: form.resumen, healthScore: form.health, pasoAPaso: form.pasos, diets: form.dietas}));
 
             event.preventDefault();
@@ -93,11 +95,11 @@ const Form = () => {
             <div className={style.check}>
                 {diets.length && diets.map(diet => {
                     return (
-                        <label htmlFor="diet" ><input key={diet.id} type="checkbox" value={diet.id} onClick={handleDiets}/>{diet.nombre}</label>
+                        <label htmlFor="diet" ><input key={diet.id} type="checkbox" value={diet.id} onClick={handleDiets} />{diet.nombre}</label>
                     )
                 })}
-
             </div>
+                {error.dietas && <p className={style.error}>{error.dietas}</p>}
                 
                 { form.nombre == '' || form.resumen == '' || form.pasos == '' || Object.keys(error).length ? <span className={style.sub}>ENVIAR</span> : <button type="submit" onClick={handleSubmit} className={style.submit}>ENVIAR</button>}
 

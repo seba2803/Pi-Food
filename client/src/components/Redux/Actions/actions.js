@@ -10,6 +10,7 @@ export const ORDEN_HEALTH = 'ORDEN_HEALTH';
 export const GET_DIETS = 'GET_DIETS';
 export const ADD_RECIPE = 'ADD_RECIPE';
 export const MY_RECIPE = 'MY_RECIPE';
+export const DELETE_RECIPE = 'DELETE_RECIPE';
 
 export const allRecets = () => {
     return async(dispatch) => {
@@ -91,6 +92,19 @@ export const myRecets = () => {
             const {data} = await axios(`${URL_API}/miReceta`);
 
             return dispatch({type: MY_RECIPE, payload: data});
+
+        } catch (error) {
+            throw Error(error.message);
+        }
+    };
+};
+
+export const deleteRecets = (id) => {
+    return async(dispatch) => {
+        try {
+            const {data} = axios.delete(`${URL_API}/delete/${id}`);
+
+            return dispatch({type: DELETE_RECIPE});
 
         } catch (error) {
             throw Error(error.message);

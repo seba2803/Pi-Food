@@ -1,4 +1,4 @@
-import { ALL_RECETS, ONE_RECET, CLEAN_RECET, NAME_RECET, ORDEN_DIETS, ORDEN_ALFABET, ORDEN_HEALTH, GET_DIETS, ADD_RECIPE, MY_RECIPE } from "../Actions/actions";
+import { ALL_RECETS, ONE_RECET, CLEAN_RECET, NAME_RECET, ORDEN_DIETS, ORDEN_ALFABET, ORDEN_HEALTH, GET_DIETS, ADD_RECIPE, MY_RECIPE, DELETE_RECIPE } from "../Actions/actions";
 
 const initialState = {
     allRecets: [],
@@ -41,6 +41,8 @@ const reducer = (state = initialState, action) => {
         case ADD_RECIPE: return {...state, miReceta: [...state.miReceta, action.payload]};
 
         case MY_RECIPE: return {...state, miReceta: [...action.payload]};
+
+        case DELETE_RECIPE: return {...state};
 
         default: return {...state};
     }

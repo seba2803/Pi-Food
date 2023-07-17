@@ -5,13 +5,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 2rem;
-    height: 33.4vw;
     background-image: url('./Home.jpg');
     padding: 100px;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
+    background-size:  100%;
+    background-position: center;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .contain{

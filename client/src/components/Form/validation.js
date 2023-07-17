@@ -22,6 +22,9 @@ const validation = (data) => {
     if(data.imagen.length < 20 || !url.test(data.imagen)){
         error.imagen = 'Debe ser una URL valida';
     }
+    if(!data.dietas[0]){
+        error.dietas = 'Debe tener al menos una dieta';
+    }
     return error;
 };
 

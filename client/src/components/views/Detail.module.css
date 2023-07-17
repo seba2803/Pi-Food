@@ -14,8 +14,9 @@
 }
 
 .btn{
-    display: fixed;
-    margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(244, 178, 55,0.9);
 }
 
 .boton{
@@ -26,13 +27,31 @@
     border-radius: 5px;
     font-size: 28px;
     box-shadow: 2px 2px 20px rgba(40,40,40);
-    background-color: rgba(230,230,10,0.3);;
+    background-color: rgba(230,230,10,0.4);;
 }
 
 .boton:hover{
     box-shadow: 3px 3px 20px 4px;
-    color:azure;
+    /* color:azure; */
     background-color: rgba(230,230,10,0.7);
+}
+
+.eliminar{
+    height: 35px;
+    width: 85px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-family: cursive;
+    box-shadow: 2px 2px 20px rgba(40,40,40);
+    background-color: rgba(190,50,50,0.4);
+}
+
+.eliminar:hover{
+    box-shadow: 3px 3px 20px 4px;
+    border: 2px outset rgb(235, 144, 16);
+    background-color: rgb(200,50,50);
 }
 
 .box{

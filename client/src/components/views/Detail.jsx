@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { oneRecet, cleanRecet } from "../Redux/Actions/actions";
+import { oneRecet, cleanRecet, deleteRecets, allRecets } from "../Redux/Actions/actions";
 import Receta from "../Receta/Receta";
 import style from './Detail.module.css';
 import filtrarTexto from './filtrarTexto';
@@ -24,8 +24,15 @@ const Detail = () => {
 
     const navigate = useNavigate();
 
-    const handleClick = (event) => {
+    const handleClick = () => {
         navigate(-1);
+    }
+
+    const handleDelete = () => {
+        alert('Receta Borrada');
+        dispatch(deleteRecets(id));
+        dispatch(allRecets());
+        navigate('/home');
     }
 
     const resumen = filtrarTexto(Recet[0]?.summary);
@@ -35,6 +42,7 @@ const Detail = () => {
 
         <div className={style.btn}>
             <button onClick={handleClick} className={style.boton}>⇦</button>
+            {isNaN(id) && <button onClick={handleDelete} className={style.eliminar}>ELIMINAR</button>}
         </div>
 
         <div className={style.contain}>
