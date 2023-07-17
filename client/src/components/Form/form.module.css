@@ -1,10 +1,10 @@
 .container{
-    height: 100vh;
+    height: 100%;
     background-image: url('./Fondo-home.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size:  100%;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .btn{

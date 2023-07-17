@@ -1,6 +1,6 @@
 .recetas{
     display: grid;
-    grid-template-columns: 0.7fr 0.7fr 0.7fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
     grid-gap: 1.5rem;
     margin: 20px;
 }
