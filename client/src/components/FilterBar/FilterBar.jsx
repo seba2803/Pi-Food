@@ -35,6 +35,7 @@ const FilterBar = ({recetas, pag}) => {
         <div className={style.container}>
             <div className={style.child}>
             <select onChange={handleDiets} className={style.select}>
+                <option value="">Elige un filtro</option>
                 <option value="todos">todos</option>
                 <option value="vegan">vegan</option>
                 <option value="vegetarian">vegetarian</option>

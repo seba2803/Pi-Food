@@ -19,8 +19,9 @@ const reducer = (state = initialState, action) => {
         case NAME_RECET: return {...state, filterRecets: [...action.payload]};
 
         case ORDEN_DIETS: 
+                        const copy = [...state.allRecets];
                             if(action.payload !== 'todos'){
-                                return {...state, filterRecets: state.filterRecets.filter(recet => recet.diets.includes(action.payload))};
+                                return {...state, filterRecets: copy.filter(recet => recet.diets.includes(action.payload))};
                             }
                             return {...state, filterRecets: state.allRecets};
 
