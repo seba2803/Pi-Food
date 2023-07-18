@@ -55,6 +55,8 @@ const Form = () => {
 
             event.preventDefault();
 
+            alert('Receta creada!')
+
             dispatch(allRecets());
             navigate(-1);
         }
