@@ -3,8 +3,8 @@
     flex-direction: row;
     justify-content: center;
     margin: 20px;
-    background-color: rgba(190,190,190,0.7);
-    width: 680px;
+    background-color: rgba(190,190,190,0.4);
+    width: max-content;
     height: 100%;
     border: 1px solid black;
     border-radius: 5px;
@@ -40,7 +40,7 @@
     color:black;
     text-decoration: none;
     margin: 5px;
-    background-color: beige;
+    background-color: rgba(233, 245, 220,0.4);
     width: 25px;
     height: 20px;
     padding: 20px;
@@ -49,4 +49,52 @@
     border-radius: 8px;
     font-size: 24px;
     font-family: cursive;
+}
+
+.prev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    margin: 5px;
+    width: 25px;
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px outset black;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: cursive;
+    background-color: rgb(230,230,230);
+}
+
+.prev:hover{
+    color: rgb(210,210,30);
+    border: 2px solid;
+}
+
+.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    margin: 5px;
+    width: 25px;
+    height: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px outset black;
+    border-radius: 8px;
+    font-size: 24px;
+    font-family: cursive;
+    background-color: rgb(230,230,230);
+}
+
+.next:hover{
+    color: rgb(210,210,30);
+    border: 2px solid;
+}
+
+.last{
+    display: none;
 }

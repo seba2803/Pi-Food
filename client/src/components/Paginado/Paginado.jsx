@@ -10,6 +10,7 @@ const Navpagin = ({numRecetas, datosTotal, paginado, currentPage}) => {
 
       return(
         <nav className={style.pag}>
+          <button className={currentPage == 1 ? style.last : style.prev} onClick={()=> {paginado(currentPage - 1)}}>↩</button>
               {numberPage.map((number) => (
             <a
               onClick={() => paginado(number)}
@@ -18,6 +19,7 @@ const Navpagin = ({numRecetas, datosTotal, paginado, currentPage}) => {
               className={currentPage == number ? style.current : style.noCurrent}
             ><span key={number} className={style.item}>{number}</span></a>
         ))}
+        <button className={currentPage >=12 ? style.last : style.next} onClick={() => {paginado(currentPage + 1)}}>↪</button>
       </nav>
       );
 }

@@ -5,9 +5,11 @@ const Main = () => {
     return (
         <div className={style.main}>
             <div className={style.contain}>
+                <h2 className={style.title}>BOOK OF RECIPES</h2>
             <NavLink to='/home'><button className={style.boton} >HOME...</button></NavLink>
-            {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis quis eligendi mollitia amet saepe eum ipsam blanditiis, molestias neque quisquam quos porro minus, magni a vel nisi laboriosam aperiam vitae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, itaque? Deleniti modi sunt libero ad illo molestiae, nam aliquam, explicabo tempore nihil dignissimos quas fugit. Corporis quaerat nemo voluptatibus voluptas! Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quasi, tempore officiis molestiae eum amet totam fugiat suscipit harum mollitia fugit labore enim quod? Excepturi est velit vel quas voluptatem?</p> */}
             </div>
+
+            <h3 className={style.description}>Este es mi Proyecto Individual de comidas en el cual pueden observar un total de 100 recetas de distintas procedencias, tipos y sabores, a su vez puedes crear tus propias recetas y agregarlas para que tambien formen parte del resto de recetas</h3>
         </div>
     )    
 }

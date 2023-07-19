@@ -20,20 +20,36 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgba(190,190,190,0.6);
+    border: 2px solid;
+    border-radius: 10%;
+    width: 550px;
 
 }
 
 .boton{
-    height: 40px;
+    height: 50px;
     border: 1px solid black;
     font-family: cursive;
-    background-color: rgba(150,150,150,0.7);
+    background-color: rgba(224, 239, 21, 0.4);
     border-radius: 5px;
     margin: 30px;
-    width: 100px;
+    width: 150px;
 }
 
 .boton:hover{
-    background-color: rgba(190,190,190,0.9);
+    background-color: rgba(231, 239, 17, 0.9);
     border: 3px solid black;
+}
+
+.title{
+    font-size: 30px;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.description{
+    font-size: 25px;
+    font-family: cursive;
+    color: azure;
 }

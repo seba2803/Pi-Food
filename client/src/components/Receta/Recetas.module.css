@@ -1,7 +1,7 @@
 .recetas{
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 0.5fr;
-    grid-gap: 1.5rem;
+    grid-gap: 2.5rem;
     margin: 20px;
 }
 
@@ -13,9 +13,13 @@
     text-align: center;
     height: 400px;
     padding: 5px;
-    background: rgba(244, 178, 55,0.9);
+    background: rgba(244, 178, 55,0.7);
     border: 2px solid black;
     border-radius: 8px;
+}
+
+.recet:hover{
+    transform: scale(1.1, 1.1);
 }
 
 .img{
