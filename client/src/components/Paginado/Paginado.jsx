@@ -8,15 +8,13 @@ const Navpagin = ({numRecetas, datosTotal, paginado, currentPage}) => {
         numberPage.push(i);
       }
 
-      console.log(currentPage, numberPage.length)
-
       return(
         <nav className={style.pag}>
           <button className={currentPage == 1 ? style.last : style.prev} onClick={()=> {paginado(currentPage - 1)}}>↩</button>
               {numberPage.map((number) => (
             <a
               onClick={() => paginado(number)}
-              href={`#${number}`}
+              href={`#`}
               value={number}
               className={currentPage == number ? style.current : style.noCurrent}
             ><span key={number} className={style.item}>{number}</span></a>

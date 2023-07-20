@@ -3,9 +3,10 @@
     background-image: url('./Fondo-home.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size:  100%;
+    background-size:  cover;
     background-position: center;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .contain{
@@ -70,6 +71,8 @@
 
 .items{
     margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 350px;
 }
 
 

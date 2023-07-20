@@ -14,6 +14,7 @@ const MiReceta = () => {
     const misRecetas = useSelector(state => state.miReceta);
 
     useEffect(() => {
+        if(!misRecetas.length)
         dispatch(myRecets());
         return (() => {
             dispatch(cleanRecet);

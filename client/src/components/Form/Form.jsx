@@ -1,13 +1,23 @@
+//hooks
 import { useState } from "react";
-import validation from "./validation";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import {addRecipe , allRecets} from '../Redux/Actions/actions';
+//configuracion
+import validation from "./validation";
+import {addRecipe , allRecets, myRecets} from '../Redux/Actions/actions';
 import style from './form.module.css';
 
 const Form = () => {
+    
+    const dispatch = useDispatch();
 
     const diets = useSelector(state => state.diets);
+
+    const misRecetas = useSelector(state => state.miReceta);
+
+    if(!misRecetas.length){
+        dispatch(myRecets());
+    }
     
     const [form, setForm] = useState({
         nombre: '',
@@ -33,7 +43,7 @@ const Form = () => {
 
        setForm({...form, [property]: value});
 
-       setError(validation({...form, [property]: value}));
+       setError(validation({...form, [property]: value}, misRecetas));
     };
 
     const handleDiets = (event) => {
@@ -46,8 +56,6 @@ const Form = () => {
             setError(validation({...form, dietas: [...form.dietas, event.target.value]}));
         }
     };
-
-    const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
         if(!error.nombre && !error.resumen && !error.health && !error.pasos && !error.imagen && !error.dietas){

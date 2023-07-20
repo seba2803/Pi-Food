@@ -39,7 +39,7 @@ const reducer = (state = initialState, action) => {
 
         case GET_DIETS: return {...state, diets: action.payload};
                                 
-        case ADD_RECIPE: return {...state, miReceta: [...state.miReceta, action.payload]};
+        case ADD_RECIPE: return {...state};
 
         case MY_RECIPE: return {...state, miReceta: [...action.payload]};
 

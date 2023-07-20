@@ -3,20 +3,23 @@ const regexUrl = '^(?!mailto:)(?:(?:http|https|ftp)://)(?:\\S+(?::\\S*)?@)?(?:(?
 
 const url = new RegExp(regexUrl, 'i')
 
-const validation = (data) => {
+const validation = (data, recetas) => {
 
     const error = {};
 
     if(data.nombre == ' ' || data.nombre.length < 15 || data.nombre.length > 55){
         error.nombre = 'Debe ser un nombre valido'; 
     }
-    if(data.resumen.length < 100 || !data.resumen.includes(' ')){
+    if(recetas?.some(name => name.title == data.nombre)){
+        error.nombre = 'Este nombre ya existe';
+    }
+    if(data.resumen.length < 100 || !data.resumen.includes(' ') || data.resumen.length > 700){
         error.resumen = 'Este campo debe ser llenado correctamente';
     }
     if(data.health < 0 || data.health > 100 || data.health == ''){
         error.health = 'Debe ser un numero entro 0 y 100';
     }
-    if(data.pasos.length < 140 || !data.pasos.includes(' ')){
+    if(data.pasos.length < 140 || !data.pasos.includes(' ') || data.pasos.length > 1200){
         error.pasos = 'Debes ser mas explícito';
     }
     if(data.imagen.length < 20 || !url.test(data.imagen)){
