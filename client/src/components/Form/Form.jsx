@@ -63,10 +63,16 @@ const Form = () => {
 
             event.preventDefault();
 
-            alert('Receta creada!')
+            setForm({
+                nombre: '',
+                resumen: '',
+                health: 0,
+                pasos: '',
+                imagen: 'https://thumbs.dreamstime.com/b/icone-perfette-del-pixel-degli-alimenti-rapida-preparazione-118046078.jpg',
+                dietas: [],
+            });
 
             dispatch(allRecets());
-            navigate(-1);
         }
     };
 
