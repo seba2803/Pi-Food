@@ -1,0 +1,29 @@
+.spinnerContainer {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente en el eje X */
+  align-items: center;
+  width: 100%; /* Centra verticalmente en el eje Y */
+  height: 100vh; /* Ajusta la altura según la altura de la ventana */
+  background-color: rgba(200, 200, 200, 0.2); /* Fondo transparente */
+  /* Resto de tu estilo de fondo */
+}
+.spinner {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side, #474bff 94%, #0000) top/11.5px
+      11.5px no-repeat,
+    conic-gradient(#0000 30%, #474bff);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 11.5px),
+    #000 0
+  );
+  animation: spinner-c7wet2 1s infinite linear;
+}
+
+@keyframes spinner-c7wet2 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

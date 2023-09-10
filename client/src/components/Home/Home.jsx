@@ -1,42 +1,52 @@
-import {useSelector, useDispatch} from 'react-redux';
-import { allRecets } from "../Redux/Actions/actions";
+import { useSelector, useDispatch } from 'react-redux';
+import { allRecets } from '../Redux/Actions/actions';
 import { useEffect, useState } from 'react';
 import Navpagin from '../Paginado/Paginado';
 import NavSearchBar from '../navSearchBar/NavSearchBar';
 import FilterBar from '../FilterBar/FilterBar';
 import style from './Home.module.css';
+import Carga from '../Carga';
 
 const Home = () => {
+  const filterRecets = useSelector((state) => state.filterRecets);
 
-    const filterRecets = useSelector(state => state.filterRecets);
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
+  const [currentPage, setCurrentPage] = useState(1);
 
-    const [currentPage, setCurrentPage] = useState(1);
+  const numRecets = 9;
 
-    const numRecets = 9;
+  useEffect(() => {
+    if (!filterRecets?.length) {
+      dispatch(allRecets());
+    }
+  }, []);
 
-    useEffect(() => {
-      if(!filterRecets?.length){
-        dispatch(allRecets());
-      }
-    },[]);
-    
-    // Calcula los índices de los objetos a mostrar en la página actual
-    const indexOfLastObject = currentPage * numRecets;
-    
-    const indexOfFirstObject = indexOfLastObject - numRecets;
- 
-    const currentObjects = filterRecets?.slice(indexOfFirstObject, indexOfLastObject);
+  if (!filterRecets?.length) {
+    return (
+      <div className={style.home}>
+        <Carga />
+      </div>
+    );
+  }
 
-    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  // Calcula los índices de los objetos a mostrar en la página actual
+  const indexOfLastObject = currentPage * numRecets;
 
-    return(
-        <div className={style.home}>
+  const indexOfFirstObject = indexOfLastObject - numRecets;
 
-        <NavSearchBar pag={paginate}/>
+  const currentObjects = filterRecets?.slice(
+    indexOfFirstObject,
+    indexOfLastObject
+  );
 
-        <Navpagin
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  return (
+    <div className={style.home}>
+      <NavSearchBar pag={paginate} />
+
+      <Navpagin
         numRecetas={numRecets}
         datosTotal={filterRecets.length}
         paginado={paginate}
@@ -44,10 +54,8 @@ const Home = () => {
       />
 
       <FilterBar recetas={currentObjects} pag={paginate} />
-        
-        </div>
-    )
-      
-}
+    </div>
+  );
+};
 
 export default Home;
