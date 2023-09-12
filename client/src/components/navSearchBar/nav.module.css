@@ -1,24 +1,24 @@
-.Nav{
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(244, 178, 55,0.9);
-    width: 100%;
-    border: 2px solid black;
-    border-radius: 5px;
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(244, 178, 55, 0.9);
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.boton{
-    height: 42px;
-    width: 90px;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: rgba(230,230,230,0.3);
-    box-shadow: 2px 2px 20px rgba(40,40,40);
-    font-family: cursive;
+.boton {
+  height: 42px;
+  width: 90px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(230, 230, 230, 0.3);
+  box-shadow: 2px 2px 20px rgba(40, 40, 40);
+  font-family: cursive;
 }
 
-.boton:hover{
-    box-shadow: 3px 3px 20px 4px;
-    background-color: rgba(230,230,10,0.7);
+.boton:hover {
+  box-shadow: 3px 3px 20px 4px;
+  background-color: rgba(230, 230, 10, 0.7);
 }

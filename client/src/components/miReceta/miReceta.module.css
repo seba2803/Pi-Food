@@ -1,36 +1,36 @@
-.container{
-    height: 100vh;
-    background-image: url('./Fondo-home.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:  100%;
+.container {
+  height: 100%;
+  background-image: url('./Fondo-home.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw;
 }
 
-.contain{
-    display: grid;
-    grid-template-columns: 0.7fr 0.7fr 0.7fr;
-    grid-gap: 1.5rem;
-    margin: 20px;
+.contain {
+  display: grid;
+  grid-template-columns: 0.7fr 0.7fr 0.7fr;
+  grid-gap: 1.5rem;
+  margin: 20px;
 }
 
-.btn{
-    display: fixed;
-    margin-left: 20px;
+.btn {
+  display: fixed;
+  margin-left: 20px;
 }
 
-.boton{
-    height: 35px;
-    width: 80px;
-    margin: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 28px;
-    box-shadow: 2px 2px 20px rgba(40,40,40);
-    background-color: rgba(230,230,10,0.3);;
+.boton {
+  height: 35px;
+  width: 80px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 28px;
+  box-shadow: 2px 2px 20px rgba(40, 40, 40);
+  background-color: rgba(230, 230, 10, 0.3);
 }
 
-.boton:hover{
-    box-shadow: 3px 3px 20px 4px;
-    color:azure;
-    background-color: rgba(230,230,10,0.7);;
+.boton:hover {
+  box-shadow: 3px 3px 20px 4px;
+  color: azure;
+  background-color: rgba(230, 230, 10, 0.7);
 }

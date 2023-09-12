@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%; /* Centra verticalmente en el eje Y */
   height: 100vh; /* Ajusta la altura según la altura de la ventana */
-  background-color: rgba(200, 200, 200, 0.2); /* Fondo transparente */
+  background-color: rgba(200, 200, 200, 0.4); /* Fondo transparente */
   /* Resto de tu estilo de fondo */
 }
 .spinner {
